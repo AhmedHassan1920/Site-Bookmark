@@ -1,0 +1,93 @@
+:root{
+    --main-color:rgba(218, 165, 32, 0.904);
+}
+
+body{
+    background-color: rgba(230, 230, 230, 0.795);
+}
+
+.inputs{
+    border-bottom: 2px solid var(--main-color);
+    border-top: 2px solid var(--main-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#submitBtn{
+    padding: 10px 45px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius:5px ;
+    color: rgb(238, 238, 238);
+    margin-block: 15px;
+    margin-inline: auto;
+    transition: 0.5s all ease-in;
+}
+
+#submitBtn:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    box-shadow: 5px 5px 10px var(--main-color);
+}
+
+h2{
+    position: relative;
+    width: 20%;
+    padding: 10px 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all ease-in;
+}
+
+h2:hover{
+    color: white;
+}
+
+h2::after{
+    content: "";
+    background-color: var(--main-color);
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    transition: 0.5s all;
+    z-index: -1;
+}
+
+h2::before{
+    content: "";
+    background-color: var(--main-color);
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    transition: 0.5s all;
+    z-index: -1;
+}
+
+h2:hover::after{
+    width: 50%;
+    border-radius: 3px 0 0 3px;
+}
+h2:hover::before{
+    width: 50%;
+    border-radius: 0 3px 3px 0;
+}
+
+.form-control:focus{
+    box-shadow: 5px 5px 10px var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.warning{
+    box-shadow: 5px 5px 10px rgb(248, 71, 71);
+    border: 1px solid rgb(248, 71, 71);
+}
+
+.success{
+    box-shadow: 5px 5px 10px rgb(63, 221, 63);
+    border: 1px solid green;
+}

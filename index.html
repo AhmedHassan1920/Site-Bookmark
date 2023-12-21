@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 9 Assignment</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mx-auto mt-5">
+        <h2 class="my-5 mx-auto text-center ">Bookmarker</h2>
+        <div class="inputs">
+            <h3 class="text-center">Bookmark your favorite sites</h3>
+
+            <label for="siteNameInput" class="mb-2 ">Site Name</label>
+            <input class="form-control " type="text" id="siteNameInput" placeholder="Bookmark Name">
+            <p class="mt-1 text-danger d-none" id="nameWarning">-Name of the site must be contain of 3 to 8 letters ex.twitter</p>
+
+            <label for="siteUrlInput" class="mb-2 mt-4 ">Site URL</label>
+            <input class="form-control" type="text" id="siteUrlInput" placeholder="WebSite URL">
+            <p class="mt-1 text-danger d-none" id="UrlWarning">-Use a valid URL please</p>
+
+            <button class="btn" id="submitBtn" onclick="addSite()">Submit</button>
+        </div>
+
+        <table class="table text-center mt-4 ">
+            <thead>
+                <th>Index</th>
+                <th>WebSite Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
